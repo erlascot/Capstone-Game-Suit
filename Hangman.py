@@ -1,7 +1,7 @@
 # Create dictionary of words from text file, keys == length of word, values == words of that length; all upper case.
 import urllib.request as url
 dict = {}
-lib = url.urlopen('https://github.com/erlascot/Capstone-Game-Suit/blob/main/google-10000-english-usa.txt')
+lib = url.urlopen('https://raw.githubusercontent.com/erlascot/Capstone-Game-Suit/main/google-10000-english-usa.txt')
 for word in lib:
     word = word.rstrip()
     l = str(len(word))
@@ -33,6 +33,8 @@ word = word_bank[random_index]
 
 #Convert word to a list of letters. Used to check user guesses.
 word_list = list(word)
+for i in range(word_len):
+    word_list[i] = chr(word_list[i])
 print(word_list)				#TODO: delete this, Temporary for testing.
 
 #Create variables to track correct and incorrect guesses.
