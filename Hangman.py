@@ -1,7 +1,7 @@
 # Create dictionary of words from text file, keys == length of word, values == words of that length; all upper case.
 import urllib.request as url
 dict = {}
-lib = url.urlopen('https://raw.githubusercontent.com/first20hours/google-10000-english/master/google-10000-english.txt')
+lib = url.urlopen('https://github.com/erlascot/Capstone-Game-Suit/blob/main/google-10000-english-usa.txt')
 for word in lib:
     word = word.rstrip()
     l = str(len(word))
